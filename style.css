@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -15,6 +17,7 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    font-family: "Exo 2", sans-serif;
   }
   /*
     5. Improve media defaults
@@ -40,4 +43,95 @@
   */
   #root, #__next {
     isolation: isolate;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d5eeff;
+    height: 100vh;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 100px); 
+    grid-template-rows: repeat(3, 100px);   
+    gap: 2px;
+    
+  }
+
+  .grid-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000; 
+    background-color: #007cb9; 
+    border-radius: 4px;
+    color: white;
+    font-size: 48px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+  }
+
+  .msg{
+    margin: 20px 0;
+    min-height: 50px;
+    line-height: 50px;
+    
+    font-size: 24px;
+    vertical-align:middle;
+  }
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+  form p {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input{
+    background-color: #ff895d;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+
+  }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #ff895d inset !important; /* Ensure background remains red */
+    box-shadow: 0 0 0 30px #ff895d inset !important; /* For other browsers */
+    -webkit-text-fill-color: white !important; /* Ensure text remains white */
+}
+
+input:focus {
+  border-color: #005689;
+  outline: none;
+}
+
+  .btn-group{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+button{
+  background-color: #005689;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+  button:hover{
+    cursor: pointer;
   }
